@@ -11,8 +11,4 @@ public class Paytm implements UPIPayments{
 
     }
 
-    @Override
-    public void getCashBackAsCreditBalance() {
-        //feature not applicable in paytm
-    }
 }

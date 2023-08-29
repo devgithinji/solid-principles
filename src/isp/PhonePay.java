@@ -11,8 +11,4 @@ public class PhonePay implements UPIPayments {
 
     }
 
-    @Override
-    public void getCashBackAsCreditBalance() {
-        // not supported
-    }
 }

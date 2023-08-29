@@ -5,6 +5,4 @@ public interface UPIPayments {
 
     void getScratchCard();
 
-    void getCashBackAsCreditBalance();
-
 }
