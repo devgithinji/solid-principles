@@ -2,19 +2,23 @@ package dip;
 
 public class ShoppingMall {
 
-    public DebitCard debitCard;
+    public BankCard bankCard;
 
-    public ShoppingMall(DebitCard debitCard) {
-        this.debitCard = debitCard;
+    public ShoppingMall(BankCard bankCard) {
+        this.bankCard = bankCard;
     }
 
     public void doPurchaseSomething(long amount) {
-        debitCard.doTransaction(amount);
+        bankCard.doTransaction(amount);
     }
 
     public static void main(String[] args) {
-        DebitCard debitCard = new DebitCard();
-        ShoppingMall shoppingMall = new ShoppingMall(debitCard);
+        BankCard bankCard = new DebitCard();
+        ShoppingMall shoppingMall = new ShoppingMall(bankCard);
         shoppingMall.doPurchaseSomething(5000);
+
+        BankCard bankCardTwo = new CreditCard();
+        ShoppingMall shoppingMallTwo = new ShoppingMall(bankCardTwo);
+        shoppingMallTwo.doPurchaseSomething(4000);
     }
 }
